@@ -1,0 +1,84 @@
+{
+  "_args": [
+    [
+      "git+https://github.com/skrishnan1786/NetSuiteConnector.git",
+      "C:\\Projects\\Riverside_k12\\riverside-integration-server"
+    ]
+  ],
+  "_from": "git+https://github.com/skrishnan1786/NetSuiteConnector.git",
+  "_id": "node-suitetalk@git+https://github.com/skrishnan1786/NetSuiteConnector.git#b2e97485c1c59974934d9b69947f5dfb6d4a06fc",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/node-suitetalk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/skrishnan1786/NetSuiteConnector.git",
+    "rawSpec": "git+https://github.com/skrishnan1786/NetSuiteConnector.git",
+    "saveSpec": "git+https://github.com/skrishnan1786/NetSuiteConnector.git",
+    "fetchSpec": "https://github.com/skrishnan1786/NetSuiteConnector.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/skrishnan1786/NetSuiteConnector.git#b2e97485c1c59974934d9b69947f5dfb6d4a06fc",
+  "_shasum": "86c2a125adff7693635849345f43729608bd0810",
+  "_spec": "git+https://github.com/skrishnan1786/NetSuiteConnector.git",
+  "_where": "C:\\Projects\\Riverside_k12\\riverside-integration-server",
+  "author": {
+    "name": "Felipe Chang",
+    "email": "felipechang@hardcake.org"
+  },
+  "bugs": {
+    "url": "https://github.com/mr-pepian/node-suitetalk/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "adm-zip": "^0.4.11",
+    "crypto": "^1.0.1",
+    "denodeify": "^1.2.1",
+    "lodash": "^4.17.10",
+    "mkdirp": "^0.5.1",
+    "soap": "^0.25.0",
+    "superagent": "^3.8.3"
+  },
+  "deprecated": false,
+  "description": "NodeJs Suitetalk wrapper.",
+  "engines": {
+    "node": ">=8.11.3",
+    "npm": ">=6.2.0"
+  },
+  "homepage": "https://github.com/mr-pepian/node-suitetalk#readme",
+  "keywords": [
+    "netsuite",
+    "suitescript",
+    "suitetalk"
+  ],
+  "license": "GPL-3.0",
+  "main": "app/index.js",
+  "name": "node-suitetalk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr-pepian/node-suitetalk.git"
+  },
+  "version": "0.0.2",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">=8.11.3",
+        "npm": ">=6.2.0"
+      },
+      "pkgid": "node-suitetalk@0.0.2"
+    },
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">=8.11.3",
+        "npm": ">=6.2.0"
+      },
+      "pkgid": "node-suitetalk@0.0.2"
+    }
+  ]
+}
