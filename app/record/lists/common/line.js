@@ -9,6 +9,7 @@ class Line extends BaseObject {
         this.bodyFieldList = [];
         this.subRecordList = [];
         this.quantity =1;
+        this.entitlement = '';
     }
 
     _getSoapType() {
@@ -18,6 +19,7 @@ class Line extends BaseObject {
     _getAttributes() {
         return {
             "quantity": `${this.quantity}`,
+            "entitlement": `${this.entitlement}`,
             "xsi:type": `${this._type}:${this._name}`,
         };
     }

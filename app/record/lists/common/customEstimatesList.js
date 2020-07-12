@@ -27,14 +27,14 @@ class CustomEstimateList extends BaseObject {
         const attributes = this._getAttributes();
         const type = 'tranSales:itemList'
 
-        if(!type){
+        if (!type) {
             throw new Error(`Invalid SOAP type ${type}`);
         }
 
         const node = {};
 
         node[type] = {};
-        
+
 
         if (attributes) {
             node[type]["$attributes"] = attributes;
@@ -46,8 +46,14 @@ class CustomEstimateList extends BaseObject {
         this.list.map((el) => {
             const t = el._getSoapType();
             const e = el.getNode()[t];
-            console.log(e["$attributes"]["quantity"]);
             xml.push(`<tranSales:item xsi:type="tranSales:EstimateItem">`);
+            if (e["$attributes"]["entitlement"] !== '') {
+                xml.push(`<tranSales:customFieldList>`)
+                xml.push(`<platformCore:customField xsi:type="platformCore:StringCustomFieldRef" scriptId="custcol_rc_bc_entitlement_info">`)
+                xml.push(`<platformCore:value>${e["$attributes"]["entitlement"]}</platformCore:value>`)
+                xml.push(`</platformCore:customField>`)
+                xml.push(`</tranSales:customFieldList>`)
+            }
             xml.push(`<tranSales:quantity>${e["$attributes"]["quantity"]}</tranSales:quantity>`)
             xml.push(`<tranSales:item externalId="${e["tranSales:item"]["$attributes"]["externalId"]}" type="inventoryItem" xsi:type="platformCore:RecordRef"></tranSales:item>`);
             xml.push("</tranSales:item>");
