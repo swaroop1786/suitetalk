@@ -35,10 +35,6 @@ class SearchField extends BaseObject {
             throw new Error("search criteria field not set");
         }
 
-        if (!this.operator) {
-            throw new Error("search criteria operator not set");
-        }
-
         if (!this.searchValue) {
             throw new Error("search criteria searchValue not set");
         }
