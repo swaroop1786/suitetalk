@@ -16,10 +16,18 @@ class SearchField extends BaseObject {
     }
 
     _getAttributes() {
-        return {
-            "operator": this.operator,
-            "xsi:type": `${this._type}:${this._name}`,
-        };
+        if(this.operator){
+            return {
+                "operator": this.operator,
+                "xsi:type": `${this._type}:${this._name}`,
+            };
+        }
+        else 
+        {
+            return {
+                "xsi:type": `${this._type}:${this._name}`,
+            };
+        }
     }
 
     getNode() {
